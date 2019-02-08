@@ -18,7 +18,9 @@ And Docker for the containers
 ## Resources
 > SSH, AES, SHA256\
 Docker docs [Docker get started](https://docs.docker.com/get-started/)\
-Spring docs [Spring io](https://www.tutorialspoint.com/spring/index.htm)
+Spring docs [Spring io](https://www.tutorialspoint.com/spring/index.htm)\
+Useful docs for [Spring boot](https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/htmlsingle/\
+spring docs [spring doc](https://docs.spring.io/spring-boot/docs/current/reference/html/boot-documentation-about.html)
 
 ## API
 
