@@ -23,6 +23,9 @@ public class KeyServiceImpl implements KeyService {
 
     @Override
     public Key createKey(Key key) {
-        return kr.save(key);
+        Key newKey = kr.save(key);
+
+        System.out.println(key.toString());
+        return newKey;
     }
 }

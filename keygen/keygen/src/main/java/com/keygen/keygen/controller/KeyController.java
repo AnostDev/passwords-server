@@ -16,6 +16,8 @@ public class KeyController {
     @Autowired
     private KeyRepository kr;
 
+
+
     @GetMapping(path = "/generate")
     public @ResponseBody String addNewKey(@RequestParam int duration){
 
@@ -26,6 +28,9 @@ public class KeyController {
         Key key = new Key();
         key.setCreationDate(creationDate);
         key.setExpireDate(expirationDate);
+
+        //save the new key to the database
+        kr.save(key);
         return "Saved key: " + key.getId().toString();
     }
 
