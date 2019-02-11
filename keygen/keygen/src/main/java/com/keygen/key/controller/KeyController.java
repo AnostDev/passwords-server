@@ -1,7 +1,6 @@
-package com.keygen.keygen.controller;
-
-import com.keygen.keygen.model.Key;
-import com.keygen.keygen.repository.KeyRepository;
+package com.keygen.key.controller;
+import com.keygen.key.model.Key;
+import com.keygen.key.service.KeyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +12,9 @@ import java.util.UUID;
 
 @Controller
 public class KeyController {
+
     @Autowired
-    private KeyRepository kr;
-
-
+    private KeyService keyService;
 
     @GetMapping(path = "/generate")
     public @ResponseBody String addNewKey(@RequestParam int duration){
@@ -29,12 +27,17 @@ public class KeyController {
         key.setCreationDate(creationDate);
         key.setExpireDate(expirationDate);
 
-        //save the new key to the database
-        kr.save(key);
+
+        keyService.createKey(key);
         return "Saved key: " + key.getId().toString();
     }
 
 
-
+    /*
+    @GetMapping(path = "/authenticate")
+    public @ResponseBody boolean authenticate(@RequestParam String password){
+        //Key key = this.keyService
+    }
+    */
 
 }

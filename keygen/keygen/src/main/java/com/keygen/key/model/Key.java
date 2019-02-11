@@ -1,4 +1,4 @@
-package com.keygen.keygen.model;
+package com.keygen.key.model;
 
 
 import javax.persistence.Entity;

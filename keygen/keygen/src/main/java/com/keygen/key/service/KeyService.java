@@ -1,7 +1,6 @@
-package com.keygen.keygen.service;
+package com.keygen.key.service;
 
-import com.keygen.keygen.model.Key;
-
+import com.keygen.key.model.Key;
 import java.util.UUID;
 
 public interface KeyService {

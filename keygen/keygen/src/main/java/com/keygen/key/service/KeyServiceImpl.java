@@ -1,15 +1,17 @@
-package com.keygen.keygen.service;
+package com.keygen.key.service;
 
-import com.keygen.keygen.model.Key;
-import com.keygen.keygen.repository.KeyRepository;
+import com.keygen.key.model.Key;
+import com.keygen.key.repository.KeyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+@Service
 public class KeyServiceImpl implements KeyService {
 
     @Autowired
-    KeyRepository kr;
+    private KeyRepository kr;
 
     @Override
     public Key findKey(UUID id) {
@@ -24,7 +26,6 @@ public class KeyServiceImpl implements KeyService {
     @Override
     public Key createKey(Key key) {
         Key newKey = kr.save(key);
-
         System.out.println(key.toString());
         return newKey;
     }
