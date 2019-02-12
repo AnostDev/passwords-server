@@ -1,4 +1,4 @@
-package com.keygen.key;
+package com.keygen;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
